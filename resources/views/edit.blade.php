@@ -16,17 +16,17 @@
     <body>
         <div class="container">
             <h1>All Students</h1>
-
+            
             <form method="POST" action="{{ route('Student.update', $students->id) }}">
-                @csrf
+                @csrf                
                 <div class="mb-3">
                     <label for="exampleInputName" class="form-label">Name</label>
-                    <input type="text" name="name" class="form-control" id="name">
+                    <input type="text" name="name" class="form-control" id="name" value="{{ $students->name }}" >
 
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email</label>
-                    <input type="email" name="email" class="form-control" id="exampleInputEmail">
+                    <input type="email" name="email" class="form-control" id="exampleInputEmail" value="{{ $students->email }}" >
                 </div>
 
                 <button type="submit" class="btn btn-primary">Submit</button>

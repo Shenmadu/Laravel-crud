@@ -8,13 +8,10 @@ Route::get('/', function () {
 });
 // Auth::routes();
 
-Route::post ('/students/store',[StudentController::class,'store'])->name('Student.store');
-
-
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get ('/students/show',[App\Http\Controllers\HomeController::class,'allStudents'])->name('view-all');
 
+Route::post ('/students/store',[StudentController::class,'store'])->name('Student.store');
 
 Route::get ('/students/show',[StudentController::class,'show'])->name('Student.show-all');
 
